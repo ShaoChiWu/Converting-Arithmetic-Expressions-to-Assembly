@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://acm.cs.nthu.edu.tw/contest/1662/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+<title>1662 - I2P(II)2019_Yang_Mini_Project1</title>
+
+    <!-- bootstrap, bootwatch CSS -->
+    
+    <link rel="stylesheet" href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/bootstrap.min.css">
+    
+    <!-- Magnific Popup core CSS -->
+    <link rel="stylesheet" href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/magnific-popup.css">
+    <link rel="stylesheet" href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/index.css" media="screen">
+    <link rel="stylesheet" href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/mfp-fade.css" media="screen">
+    <script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/jquery.min.js"></script>
+  </head>
+  <body onload="getRestTime()">
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse newbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://acm.cs.nthu.edu.tw/">NTHU Online Judge</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="nav-text"><a href="https://acm.cs.nthu.edu.tw/contest/">Contest</a></li>
+            <li class="nav-text"><a href="https://acm.cs.nthu.edu.tw/problem/">Problem</a></li>
+            <li class="nav-text"><a href="https://acm.cs.nthu.edu.tw/users/submit/">Submit</a></li>
+            <li class="nav-text"><a href="https://acm.cs.nthu.edu.tw/status/?username=">Status</a></li>
+            <!--li class="nav-text"><a href="/group/list/">Group</a></li-->
+            <!--
+            <li class="dropdown nav-text">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                 role="button" aria-expanded="false">User
+                 <span class="caret"></span>
+               </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">User List</a></li>
+                <li><a href="#">User Rank</a></li>
+              </ul>
+            </li>
+            -->
+            <li class="nav-text">
+              <form class="navbar-form">
+                <div class="form-group">
+                  <input id="globalNavigation" type="text" class="form-control" placeholder="Search Site" autocomplete="off">
+                </div>
+              </form>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="nav-text-auth"><a href="https://acm.cs.nthu.edu.tw/users/login/?next=/contest/1662/">Login</a></li>
+            <li class="nav-text-auth"><a href="https://acm.cs.nthu.edu.tw/users/create/">Register</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- wrap all page elements to div -->
+    <div class="wrap-body container-fluid">
+      
+
+      
+
+
+  <div class="container">
+
+    <!--Title-->
+    <div class="well">
+      <h2>1662 - I2P(II)2019_Yang_Mini_Project1
+        <a class="btn btn-info" href="https://acm.cs.nthu.edu.tw/contest/scoreboard/1662/">Scoreboard</a>
+        
+        
+      </h2>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h1 class="panel-title" style="text-align:center;">Time</h1>
+      </div>
+      <div class="panel-body inline">
+        <table style="width:100%;text-align:center;">
+          <tbody><tr>
+            <td id="start" style="text-align:left;">2019/04/19 13:20:00</td>
+            <td id="clock">Contest Ended</td>
+            <td id="end" style="text-align:right;">2019/04/19 15:10:00</td>
+          </tr>
+        </tbody></table>
+      </div>
+      <div class="progress" style="margin-left: 5%; width: 90%; overflow: inherit;">
+        <div id="timeline" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </div>
+    <!-- Clarification -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title" style="text-align:center;">Clarification</h1>
+      </div>
+      <div id="contest_clarification">
+        <table class="table" style="table-layout: fixed; width: 100%">
+          <thead>
+            <tr>
+              
+              <th width="2%">#</th>
+              <th width="15%">Problem</th>
+              <th width="10%">Asker</th>
+              <th width="20%">Description</th>
+              <th width="20%">Reply</th>
+              <th width="10%">Replier</th>
+              <th width="10%">Reply Time</th>
+              <th width="10%">For all team</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+
+        <div align="center">
+          
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!--Contest detail-->
+    <div id="detail">
+      <ul class="nav nav-tabs" role="tablist" id="contest_tab">
+        <li class="" role="presentation">
+          <a href="https://acm.cs.nthu.edu.tw/contest/1662/#overview" role="tab" data-toggle="tab" aria-expanded="false">Overview</a>
+        </li>
+        <li class="dropdown active" role="presentation">
+          <a href="https://acm.cs.nthu.edu.tw/contest/1662/#problem" class="dropdown-toggle" data-toggle="dropdown">
+            Problem<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            
+            <li role="presentation" class="active">
+              <a href="https://acm.cs.nthu.edu.tw/contest/1662/#problem12191" tabindex="-1" role="tab" data-toggle="tab" aria-expanded="true">2019 Mini Project I (Demo)</a>
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+      <div class="tab-content" id="content">
+        <div class="tab-pane" id="overview">
+            
+<link href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/overview.css" rel="stylesheet">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Problem</th>
+      <th>Pass Rate (passed user / total user)</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>12191</td>
+      <td>
+        <a href="https://acm.cs.nthu.edu.tw/contest/1662/#problem12191" class="overview_problem" tabindex="-1" role="tab" data-toggle="tab" aria-expanded="false">2019 Mini Project I (Demo)</a>
+      </td>
+      <td>
+        
+        <div class="progress" style="overflow: inherit;">
+          <div class="progress-bar progress-bar-success" style="width: %;" data-toggle="tooltip" data-placement="top" title="" data-original-title="%">
+          </div>
+          <div class="progress-bar progress-bar-danger" style="width: %;" data-toggle="tooltip" data-placement="top" title="" data-original-title="%">
+          </div>
+        </div>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+        </div>
+        
+        <div class="tab-pane active" id="problem12191">
+          
+<div class="pname_block panel">
+  <div class="left">
+    <div class="pname">
+      <h2>12191 - 2019 Mini Project I (Demo) &nbsp;&nbsp;
+        
+      </h2>
+    </div>
+  </div>
+  <div class="right">
+    <div class="problem-option">
+      <a href="https://acm.cs.nthu.edu.tw/status/?pid=12191">Status</a> &nbsp;|&nbsp;
+      <!-- <a>Printable </a> &nbsp;|&nbsp; -->
+      <!-- <a>Rank</a> &nbsp;|&nbsp; -->
+      <a data-toggle="modal" data-target="#limit_12191">Limits</a>
+      
+        <a class="btn btn-primary" href="https://acm.cs.nthu.edu.tw/users/submit/12191">Submit</a>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="limit_12191">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">Limits</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td></td>
+              <th>Time</th>
+              <th>Memory</th>
+              
+              </tr><tr>
+                <th>Case 1</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 2</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 3</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 4</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 5</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 6</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 7</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 8</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 9</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 10</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 11</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 12</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 13</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 14</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 15</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 16</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 17</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 18</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 19</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+              <tr>
+                <th>Case 20</th>
+                <td>1 sec</td>
+                <td>32 MB</td>
+              </tr>
+              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="width:75%; float:left">
+  <h3>Description</h3>
+  <p>You need to implement a calculator.The input is a list of expressions consisting of integers, operators(+,-,*,/,=,&amp;,|,^), and at least three variables x, y, z(x, y, z are exist in the begin, and some local variables will appear in the input file); and the output is a list of assembly codes.</p>
+
+<p>You should merge all your header files and codes into a single file to submit.</p>
+
+  <h3>Input</h3>
+  <p><span style="color:rgb(85, 85, 85); font-family:helvetica neue,helvetica,arial,sans-serif">Contains mutiple expressions. Each expression is separated by a newline character ('\n').</span></p>
+
+<p><span style="color:#FF0000"><span style="font-family:helvetica neue,helvetica,arial,sans-serif">The initial value of variables, x, y, and z, are stored in memory [0], [4], and [8] respectively.&nbsp;</span></span></p>
+
+<p><span style="color:#FF0000">If a variable first appear in the left hand side, it is valid and can be use in the right hand side in the future; if a variable first appear in the right hand side, it is invalid and the output should print EXIT 1</span></p>
+
+<p><span style="color:rgb(85, 85, 85); font-family:helvetica neue,helvetica,arial,sans-serif">After the evaluation of the assembly code, the answer of the variables x, y, z needs to be stored in the registers r0, r1, and r2 respectively.</span></p>
+
+  <h3>Output</h3>
+  <p>If the expression is illegal,&nbsp;your final output should be "EXIT 1".</p>
+
+<div style="box-sizing: border-box; font-family: arial; color: rgb(102, 102, 102); font-size: 11px;"><span style="color:rgb(0, 0, 0)"><span style="font-size:14px">Namely , you don't need to write&nbsp;following codes if the expression is illegal&nbsp;</span></span></div>
+
+<div style="box-sizing: border-box; font-family: arial; color: rgb(102, 102, 102); font-size: 11px;"><span style="color:rgb(0, 0, 0)"><span style="font-size:14px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf("MOV r0 [0]\n");&nbsp;</span></span></div>
+
+<div style="box-sizing: border-box; font-family: arial; color: rgb(102, 102, 102); font-size: 11px;"><span style="color:rgb(0, 0, 0)"><span style="font-size:14px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf("MOV r1 [4]\n");&nbsp;</span></span></div>
+
+<div style="box-sizing: border-box; font-family: arial; color: rgb(102, 102, 102); font-size: 11px;"><span style="color:rgb(0, 0, 0)"><span style="font-size:14px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf("MOV r2 [8]\n");&nbsp;</span></span></div>
+
+<p>Note: You need to output&nbsp;a list of assembly codes. This time the judge is using special judge, and&nbsp;<span style="color:rgb(255, 0, 0)">your answer doesn't need to be as same as the sample output. You just need to ensure the final values which are&nbsp;stored in registers r0, r1, and r2&nbsp;(the value of variables x, y ,and z) is correct.</span></p>
+
+<p><span style="color:rgb(0, 0, 0)">There must be a “\n” at the end of line.</span></p>
+
+  <h3>Sample Input&nbsp;&nbsp;<a class="btn btn-primary downloadSampleInputButton" pid="12191" href="data:text/plain;charset=utf-8,x%20%3D%20100%2B10*y%0Ay%20%3D%20z%2B100*10%2F50*10%0Az%20%3D%2010*x%2F100%0Axx%20%3D%20x%0Ayy%20%3D%20y%0Azz%20%3D%20z%0Ax%20%3D%20xx%20%5Ex%0Ay%3Dyy%7Cy%0Az%20%3D%20zz%26z%0A" download="12191_sampleIn">Download</a></h3>
+  <div class="panel-body">
+    <textarea id="12191_sampleIn" class="panel-body sampleIO" readonly="" style="height: 230px;">x = 100+10*y
+y = z+100*10/50*10
+z = 10*x/100
+xx = x
+yy = y
+zz = z
+x = xx ^x
+y=yy|y
+z = zz&amp;z
+</textarea>
+  </div>
+  <h3>Sample Output&nbsp;&nbsp;<a class="btn btn-primary downloadSampleOutputButton" pid="12191" href="data:text/plain;charset=utf-8,MOV%20r0%20100%0AMOV%20r1%2010%0AMOV%20r2%20%5B4%5D%0AMUL%20r1%20r2%0AADD%20r0%20r1%0AMOV%20%5B0%5D%20r0%0AMOV%20r0%20%5B8%5D%0AMOV%20r1%20100%0AMOV%20r2%2010%0AMUL%20r1%20r2%0AMOV%20r2%2050%0ADIV%20r1%20r2%0AMOV%20r2%2010%0AMUL%20r1%20r2%0AADD%20r0%20r1%0AMOV%20%5B4%5D%20r0%0AMOV%20r0%2010%0AMOV%20r1%20%5B0%5D%0AMUL%20r0%20r1%0AMOV%20r1%20100%0ADIV%20r0%20r1%0AMOV%20%5B8%5D%20r0%0AMOV%20r0%20%5B0%5D%0AMOV%20%5B12%5D%20r0%0AMOV%20r0%20%5B4%5D%0AMOV%20%5B16%5D%20r0%0AMOV%20r0%20%5B8%5D%0AMOV%20%5B20%5D%20r0%0AMOV%20r0%20%5B12%5D%0AMOV%20r1%20%5B0%5D%0AXOR%20r0%20r1%0AMOV%20%5B0%5D%20r0%0AMOV%20r0%20%5B16%5D%0AMOV%20r1%20%5B4%5D%0AOR%20r0%20r1%0AMOV%20%5B4%5D%20r0%0AMOV%20r0%20%5B20%5D%0AMOV%20r1%20%5B8%5D%0AAND%20r0%20r1%0AMOV%20%5B8%5D%20r0%0AMOV%20r0%20%5B0%5D%0AMOV%20r1%20%5B4%5D%0AMOV%20r2%20%5B8%5D%0AEXIT%200%0A" download="12191_sampleOut">Download</a></h3>
+  <div class="panel-body">
+    <textarea id="12191_sampleOut" class="panel-body sampleIO" readonly="" style="height: 930px;">MOV r0 100
+MOV r1 10
+MOV r2 [4]
+MUL r1 r2
+ADD r0 r1
+MOV [0] r0
+MOV r0 [8]
+MOV r1 100
+MOV r2 10
+MUL r1 r2
+MOV r2 50
+DIV r1 r2
+MOV r2 10
+MUL r1 r2
+ADD r0 r1
+MOV [4] r0
+MOV r0 10
+MOV r1 [0]
+MUL r0 r1
+MOV r1 100
+DIV r0 r1
+MOV [8] r0
+MOV r0 [0]
+MOV [12] r0
+MOV r0 [4]
+MOV [16] r0
+MOV r0 [8]
+MOV [20] r0
+MOV r0 [12]
+MOV r1 [0]
+XOR r0 r1
+MOV [0] r0
+MOV r0 [16]
+MOV r1 [4]
+OR r0 r1
+MOV [4] r0
+MOV r0 [20]
+MOV r1 [8]
+AND r0 r1
+MOV [8] r0
+MOV r0 [0]
+MOV r1 [4]
+MOV r2 [8]
+EXIT 0
+</textarea>
+  </div>
+  
+  
+  
+  <h3>Tags</h3>
+    <div id="tags" style="float:left;width:60%">
+      
+        
+      
+    </div>
+    
+  
+
+  <br>
+  <br>
+  <br>
+  <h4>
+    <a onclick="alert(&#39;Discuss not open yet&#39;)">Discuss</a>
+  </h4>
+  <br>
+  <br>
+  <br>
+</div>
+<script>
+var pid = 12191;
+</script>
+<script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/problem.js"></script>
+
+
+        </div>
+        
+        <!-- <div class="tab-pane" id="scoreboard">
+        </div> -->
+      </div>
+    </div>
+    
+    
+  </div>
+
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="navbar navbar-inverse navbar-fixed-bottom sticky-footer container-fluid">
+        <div class="navbar-collapse collapse">
+          <p class="navbar-text col-lg-4">Contact us: nthucsoj@gmail.com</p>
+          <p class="navbar-text col-lg-6">© NTHU Online Judge 2015, Templates are from Bootswatch Project</p>
+          <p id="time" class="navbar-text">2020/9/14 04:24:03</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/bootstrap.min.js"></script>
+    <script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/function.js"></script>
+    <script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/jquery.magnific-popup.min.js"></script>
+    
+
+<script type="text/javascript">
+jQuery(function($) {
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+function sameOrigin(url) {
+    // test that a given url is a same-origin URL
+    // url could be relative or scheme relative or absolute
+    var host = document.location.host; // host + port
+    var protocol = document.location.protocol;
+    var sr_origin = '//' + host;
+    var origin = protocol + sr_origin;
+    // Allow absolute or scheme relative URLs to same origin
+    return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+        (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+        // or any other URL that isn't scheme relative or absolute i.e relative.
+        !(/^(\/\/|http:|https:).*/.test(url));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+            // Send the token to same-origin, relative URLs only.
+            // Send the token only if the method warrants CSRF protection
+            // Using the CSRFToken value acquired earlier
+            xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+        }
+    }
+});
+});
+</script>
+
+
+<script type="text/javascript" src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/django_admin.js"></script>
+<script type="text/javascript" src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/autocomplete.js"></script>
+<script type="text/javascript" src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/widget.js"></script>
+<script type="text/javascript" src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/addanother.js"></script>
+<script type="text/javascript" src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/text_widget.js"></script>
+<script type="text/javascript" src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/remote.js"></script>
+<link rel="stylesheet" type="text/css" href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/style.css">
+
+    <script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/popup-setting.js"></script>
+    <script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/base.js"></script>
+    <script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/clock.js"></script>
+    
+<link href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/contest.css" rel="stylesheet">
+<link href="./1662 - I2P(II)2019_Yang_Mini_Project1_files/problem.css" rel="stylesheet">
+<script src="./1662 - I2P(II)2019_Yang_Mini_Project1_files/contest.js"></script>
+
+  
+
+</body></html>
